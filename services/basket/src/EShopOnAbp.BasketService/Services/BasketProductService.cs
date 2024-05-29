@@ -36,11 +36,19 @@ public class BasketProductService : IBasketProductService, ITransientDependency
 
     private async Task<ProductDto> GetProductAsync(Guid productId)
     {
-        var request = new ProductRequest { Id = productId.ToString() };
-        _logger.LogInformation("=== GRPC request {@request}", request);
-        var response = await _productPublicGrpcClient.GetByIdAsync(request);
-        _logger.LogInformation("=== GRPC response {@response}", response);
-        return _mapper.Map<ProductResponse, ProductDto>(response) ??
-               throw new UserFriendlyException(BasketServiceDomainErrorCodes.ProductNotFound);
+        try
+        {
+            var request = new ProductRequest { Id = productId.ToString() };
+            _logger.LogInformation("=== GRPC request {@request}", request);
+            var response = await _productPublicGrpcClient.GetByIdAsync(request);
+            _logger.LogInformation("=== GRPC response {@response}", response);
+            return _mapper.Map<ProductResponse, ProductDto>(response) ??
+                   throw new UserFriendlyException(BasketServiceDomainErrorCodes.ProductNotFound);
+        }
+        catch (Exception ex)
+        {
+
+            throw;
+        }
     }
 }
