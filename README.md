@@ -15,3 +15,6 @@ replace your postgres connection string in appsettings.json
 
 ![image](https://github.com/Sahulhameed9094/eShopOnAbp/assets/30176312/fbc94f41-2ae2-4f13-9083-cfb93dee1edb)
 
+![image](https://github.com/Sahulhameed9094/eShopOnAbp/assets/30176312/8a32fca5-6948-4f5d-a3c4-e954e319cbb6)
+
+
