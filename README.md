@@ -1,3 +1,5 @@
+## Tutorial: https://community.abp.io/events/microservice-development-iv7d46ov
+
 ## step 1: Config KeyCloack
  point your postgres db connection string inside **keycloak-24.0.4\conf\keycloak.conf** config file 
 
