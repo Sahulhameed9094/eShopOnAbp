@@ -8,4 +8,5 @@ replace your postgres connection string in appsettings.json
 
 ## step3 : Run Dbmigrator from shared project
 
+## Application Flow
 ![image](https://github.com/Sahulhameed9094/eShopOnAbp/assets/30176312/ffd6951d-a0a9-44f9-892a-ca69eb8a15ab)
